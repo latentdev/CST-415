@@ -37,10 +37,19 @@ namespace CST_415_Assignment_1
                 EndPoint remoteEP = new IPEndPoint(IPAddress.Any, 0);
                 int result = listeningSocket.ReceiveFrom(buffer, ref remoteEP);
 
+                Console.WriteLine();
+
                 Message msg = Message.FromPacket(buffer);
-                Console.WriteLine("Received " + result.ToString() + " bytes: ");
-                msg.ToString();
-                Action(msg);
+                Console.WriteLine("Received " + result.ToString() + " bytes ");
+                Console.WriteLine(msg.ToString());
+                Console.WriteLine();
+
+                msg = Action(msg);
+                Console.WriteLine("Sending message to client...");
+                result = listeningSocket.SendTo(msg.ToPacket(), remoteEP);
+                Console.WriteLine("Sent " + result.ToString() + " bytes");
+                Console.WriteLine();
+
             }
             catch (Exception ex)
             {
@@ -48,69 +57,91 @@ namespace CST_415_Assignment_1
             }
         }
 
-        private void Action(Message msg)
+        private Message Action(Message in_msg)
         {
-            switch(msg.msg_type)
+            Message msg;
+            switch(in_msg.msg_type)
             {
                 case (byte)msg_type.REQUEST_PORT:
                     {
-                        RequestPort(msg);
+                        msg = RequestPort(in_msg);
                         break;
                     }
                 case (byte)msg_type.LOOKUP_PORT:
                     {
-                        LookUpPort(msg);
+                        msg = LookUpPort(in_msg);
                         break;
                     }
                 case (byte)msg_type.KEEP_ALIVE:
                     {
-                        KeepAlive(msg);
+                        msg = KeepAlive(in_msg);
                         break;
                     }
                 case (byte)msg_type.CLOSE_PORT:
                     {
-                        ClosePort(msg);
+                        msg = ClosePort(in_msg);
                         break;
                     }
                 case (byte)msg_type.PORT_DEAD:
                     {
-                        PortDead(msg);
+                        msg = PortDead(in_msg);
                         break;
                     }
                 case (byte)msg_type.STOP:
                     {
-                        Stop(msg);
+                        msg = Stop(in_msg);
                         break;
                     }
                 default:
-                    break;
+                    {
+                        msg = new Message((byte)msg_type.RESPONSE, in_msg.service_name, in_msg.port, (byte)status.INVALID_ARG);
+                        break;
+                    }
             }
+            return msg;
         }
 
-        private void RequestPort(Message msg)
+        private Message RequestPort(Message msg)
         {
             //implement RequestPort();
-            Console.WriteLine("Requesting Port: "+)
+            Console.WriteLine("Service: " + new string(msg.service_name));
+            Console.WriteLine("Requesting Port: " + msg.port);
+            return LowestPort(msg);
         }
-        private void LookUpPort(Message msg)
+        private Message LookUpPort(Message msg)
         {
             //implement LookUpPort();
+            Console.WriteLine("Service: " + new string(msg.service_name));
+            Console.WriteLine("Looking Up Port: " + msg.port);
+            return msg;
         }
-        private void KeepAlive(Message msg)
+        private Message KeepAlive(Message msg)
         {
             //implement KeepAlive();
+            Console.WriteLine("Service: " + new string(msg.service_name));
+            Console.WriteLine("Recieved Keep Alive for Port: " + msg.port);
+            return msg;
         }
-        private void ClosePort(Message msg)
+        private Message ClosePort(Message msg)
         {
             //implement ClosePort();
+            Console.WriteLine("Service: " + new string(msg.service_name));
+            Console.WriteLine("Closing Port: " + msg.port);
+            return msg;
         }
-        private void PortDead(Message msg)
+        private Message PortDead(Message msg)
         {
             //implement PortDead();
+            Console.WriteLine("Service: " + new string(msg.service_name));
+            Console.WriteLine("Marking Port " + msg.port + " Dead");
+            return msg;
         }
-        private void Stop(Message msg)
+        private Message Stop(Message msg)
         {
             //implement Stop();
+            Console.WriteLine("Service: " + new string(msg.service_name));
+            Console.WriteLine("Stopping Server");
+            return msg;
         }
 
         private Port[] CreatePorts(int startPort,int endPort)
@@ -118,9 +149,31 @@ namespace CST_415_Assignment_1
             Port[] ports = new Port[endPort - startPort+1];
             for(int i=0;i<ports.Length;i++)
             {
-                ports[i] = new Port(startPort + i, (int)alive.DEAD);
+                ports[i] = new Port((UInt16)(startPort + i), (int)alive.DEAD);
             }
             return ports;
+        }
+        private Message LowestPort(Message in_msg)
+        {
+            Message msg = new Message((byte)msg_type.RESPONSE, in_msg.service_name, 0, (byte)status.ALL_PORTS_BUSY);
+            int i = 0;
+            while (msg.status!=(byte)status.SUCCESS || i>=ports.Length)
+            {
+                if(ports[i].available==true)
+                {
+                    ports[i].serviceName = in_msg.service_name;
+                    ports[i].available = false;
+
+
+
+
+
+
+                    msg.port = ports[i].port;
+                    msg.status = (byte)status.SUCCESS;
+                }
+            }
+            return msg;
         }
     }
 }

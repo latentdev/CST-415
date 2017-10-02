@@ -29,12 +29,12 @@ namespace CST_415_Assignment_1
         }
         public byte[] ToPacket()
         {
-            byte[] packet = new byte[5 + (service_name.Length * 2)];
+            byte[] packet = new byte[5 + service_name.Length];
             packet[0] = msg_type;
-            packet[1] = (byte) (port >> 8);
-            packet[2] = (byte)port;
+            packet[1] = (byte)port;
+            packet[2] = (byte)(port >> 8);
             packet[3] = status;
-            packet[4] = (byte)(service_name.Length * 2);
+            packet[4] = (byte)(service_name.Length);
             byte[] serviceNameBytes= Encoding.UTF8.GetBytes(service_name);
             for (int i = 0;i<serviceNameBytes.Length;i++)
             {
@@ -42,6 +42,85 @@ namespace CST_415_Assignment_1
             }
             return packet;
         }
+        public override string ToString()
+        {
+            string str = "";
+            switch (msg_type)
+            {
+                case 1:
+                    {
+                        str += "msg_type: REQUEST_PORT\n";
+                        break;
+                    }
+                case 2:
+                    {
+                        str += "msg_type: LOOKUP_PORT\n";
+                        break;
+                    }
+                case 3:
+                    {
+                        str += "msg_type: KEEP_ALIVE\n";
+                        break;
+                    }
+                case 4:
+                    {
+                        str += "msg_type: CLOSE_PORT\n";
+                        break;
+                    }
+                case 5:
+                    {
+                        str += "msg_type: PORT_DEAD\n";
+                        break;
+                    }
+                case 6:
+                    {
+                        str += "msg_type: STOP\n";
+                        break;
+                    }
+                default:
+                    break;
+            }
+            str += "service_name: " + new string(service_name) + "\n";
+            str += "port: " + port + "\n";
+
+            switch (status)
+            {
+                case 0:
+                    {
+                        str += "Status: SUCCESS\n";
+                        break;
+                    }
+                case 1:
+                    {
+                        str += "Status: SERVICE_IN_USE\n";
+                        break;
+                    }
+                case 2:
+                    {
+                        str += "Status: SERVICE_NOT_FOUND\n";
+                        break;
+                    }
+                case 3:
+                    {
+                        str += "Status: ALL_PORTS_BUSY\n";
+                        break;
+                    }
+                case 4:
+                    {
+                        str += "Status: INVALID_ARG\n";
+                        break;
+                    }
+                case 5:
+                    {
+                        str += "Status: UNDEFINED_ERROR\n";
+                        break;
+                    }
+                default:
+                    break;
+            }
+            return str;
+        }
+
         static public Message FromPacket(byte [] packet)
         {
             Message msg = new Message();

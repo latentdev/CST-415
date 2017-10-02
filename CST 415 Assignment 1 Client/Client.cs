@@ -38,10 +38,14 @@ namespace CST_415_Assignment_1_Client
 
                 // receive a message from the server
                 Console.WriteLine("Waiting for message from server...");
-                buffer = new byte[54];
+                buffer = new byte[255];
                 EndPoint remoteEP = new IPEndPoint(IPAddress.Any, 0);
                 result = clientSocket.ReceiveFrom(buffer, ref remoteEP);
-                Console.WriteLine("Received " + result.ToString() + " bytes: " + new string(ASCIIEncoding.UTF8.GetChars(buffer)));
+                Console.WriteLine();
+                Console.WriteLine("Received " + result.ToString() + " bytes");
+                Console.WriteLine();
+                Console.WriteLine(Message.FromPacket(buffer).ToString());
+                Console.WriteLine();
             }
             catch (Exception ex)
             {

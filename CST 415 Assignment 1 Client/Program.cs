@@ -10,6 +10,8 @@ namespace CST_415_Assignment_1_Client
     {
         static void Main(string[] args)
         {
+            Client client = new Client();
+            client.Loop();
         }
     }
 }

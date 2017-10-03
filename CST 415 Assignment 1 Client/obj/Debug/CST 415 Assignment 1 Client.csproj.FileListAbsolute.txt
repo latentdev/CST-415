@@ -4,3 +4,8 @@ C:\Users\Laten\Documents\Visual Studio 2017\Projects\CST 415 Assignment 1\CST-41
 C:\Users\Laten\Documents\Visual Studio 2017\Projects\CST 415 Assignment 1\CST-415\CST 415 Assignment 1 Client\obj\Debug\CST 415 Assignment 1 Client.exe
 C:\Users\Laten\Documents\Visual Studio 2017\Projects\CST 415 Assignment 1\CST-415\CST 415 Assignment 1 Client\obj\Debug\CST 415 Assignment 1 Client.pdb
 C:\Users\Laten\Documents\Visual Studio 2017\Projects\CST 415 Assignment 1\CST-415\CST 415 Assignment 1 Client\obj\Debug\CST 415 Assignment 1 Client.csprojResolveAssemblyReference.cache
+C:\Users\Laten\Documents\GitHub\CST-415\CST 415 Assignment 1 Client\bin\Debug\CST 415 Assignment 1 Client.dll.config
+C:\Users\Laten\Documents\GitHub\CST-415\CST 415 Assignment 1 Client\bin\Debug\CST 415 Assignment 1 Client.dll
+C:\Users\Laten\Documents\GitHub\CST-415\CST 415 Assignment 1 Client\bin\Debug\CST 415 Assignment 1 Client.pdb
+C:\Users\Laten\Documents\GitHub\CST-415\CST 415 Assignment 1 Client\obj\Debug\CST 415 Assignment 1 Client.dll
+C:\Users\Laten\Documents\GitHub\CST-415\CST 415 Assignment 1 Client\obj\Debug\CST 415 Assignment 1 Client.pdb

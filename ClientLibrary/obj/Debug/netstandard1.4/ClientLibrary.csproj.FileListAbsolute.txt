@@ -1,0 +1,7 @@
+C:\Users\Laten\Documents\GitHub\CST-415\ClientLibrary\bin\Debug\netstandard1.4\ClientLibrary.deps.json
+C:\Users\Laten\Documents\GitHub\CST-415\ClientLibrary\obj\Debug\netstandard1.4\ClientLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Laten\Documents\GitHub\CST-415\ClientLibrary\obj\Debug\netstandard1.4\ClientLibrary.AssemblyInfo.cs
+C:\Users\Laten\Documents\GitHub\CST-415\ClientLibrary\bin\Debug\netstandard1.4\ClientLibrary.dll
+C:\Users\Laten\Documents\GitHub\CST-415\ClientLibrary\bin\Debug\netstandard1.4\ClientLibrary.pdb
+C:\Users\Laten\Documents\GitHub\CST-415\ClientLibrary\obj\Debug\netstandard1.4\ClientLibrary.dll
+C:\Users\Laten\Documents\GitHub\CST-415\ClientLibrary\obj\Debug\netstandard1.4\ClientLibrary.pdb

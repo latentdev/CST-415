@@ -105,15 +105,14 @@ namespace CST_415_Assignment_1
         {
             //implement RequestPort();
             Console.WriteLine("Service: " + new string(msg.service_name));
-            Console.WriteLine("Requesting Port: " + msg.port);
+            Console.WriteLine("Requesting Port");
             return LowestPort(msg);
         }
         private Message LookUpPort(Message msg)
         {
             //implement LookUpPort();
-            Console.WriteLine("Service: " + new string(msg.service_name));
-            Console.WriteLine("Looking Up Port: " + msg.port);
-            return msg;
+            Console.WriteLine("Looking Up Port for Service: " + new string(msg.service_name));
+            return FindService(msg);
         }
         private Message KeepAlive(Message msg)
         {
@@ -157,21 +156,31 @@ namespace CST_415_Assignment_1
         {
             Message msg = new Message((byte)msg_type.RESPONSE, in_msg.service_name, 0, (byte)status.ALL_PORTS_BUSY);
             int i = 0;
-            while (msg.status!=(byte)status.SUCCESS || i>=ports.Length)
+            while (msg.status!=(byte)status.SUCCESS && i<ports.Length)
             {
                 if(ports[i].available==true)
                 {
                     ports[i].serviceName = in_msg.service_name;
                     ports[i].available = false;
-
-
-
-
-
-
                     msg.port = ports[i].port;
                     msg.status = (byte)status.SUCCESS;
                 }
+                i++;
+            }
+            return msg;
+        }
+        private Message FindService(Message in_msg)
+        {
+            Message msg = new Message((byte)msg_type.RESPONSE, in_msg.service_name, 0, (byte)status.SERVICE_NOT_FOUND);
+            int i = 0;
+            while (msg.status != (byte)status.SUCCESS && i < ports.Length)
+            {
+                if (ports[i].serviceName.SequenceEqual(in_msg.service_name))//ports[i].serviceName == in_msg.service_name)
+                {
+                    msg.port = ports[i].port;
+                    msg.status = (byte)status.SUCCESS;
+                }
+                i++;
             }
             return msg;
         }

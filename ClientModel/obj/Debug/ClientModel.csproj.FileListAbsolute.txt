@@ -1,0 +1,4 @@
+C:\Users\Laten\Documents\GitHub\CST-415\ClientModel\bin\Debug\ClientModel.dll
+C:\Users\Laten\Documents\GitHub\CST-415\ClientModel\bin\Debug\ClientModel.pdb
+C:\Users\Laten\Documents\GitHub\CST-415\ClientModel\obj\Debug\ClientModel.dll
+C:\Users\Laten\Documents\GitHub\CST-415\ClientModel\obj\Debug\ClientModel.pdb

@@ -1,0 +1,17 @@
+C:\Users\Laten\Documents\GitHub\CST-415\Client UI\obj\Debug\Client UI.csprojResolveAssemblyReference.cache
+C:\Users\Laten\Documents\GitHub\CST-415\Client UI\obj\Debug\MainWindow.g.cs
+C:\Users\Laten\Documents\GitHub\CST-415\Client UI\obj\Debug\App.g.cs
+C:\Users\Laten\Documents\GitHub\CST-415\Client UI\obj\Debug\Client UI_MarkupCompile.cache
+C:\Users\Laten\Documents\GitHub\CST-415\Client UI\obj\Debug\Client UI_MarkupCompile.lref
+C:\Users\Laten\Documents\GitHub\CST-415\Client UI\bin\Debug\Client UI.exe.config
+C:\Users\Laten\Documents\GitHub\CST-415\Client UI\bin\Debug\Client UI.exe
+C:\Users\Laten\Documents\GitHub\CST-415\Client UI\bin\Debug\Client UI.pdb
+C:\Users\Laten\Documents\GitHub\CST-415\Client UI\bin\Debug\ClientModel.dll
+C:\Users\Laten\Documents\GitHub\CST-415\Client UI\bin\Debug\ClientModel.pdb
+C:\Users\Laten\Documents\GitHub\CST-415\Client UI\obj\Debug\MainWindow.baml
+C:\Users\Laten\Documents\GitHub\CST-415\Client UI\obj\Debug\Client UI.g.resources
+C:\Users\Laten\Documents\GitHub\CST-415\Client UI\obj\Debug\Client_UI.Properties.Resources.resources
+C:\Users\Laten\Documents\GitHub\CST-415\Client UI\obj\Debug\Client UI.csproj.GenerateResource.Cache
+C:\Users\Laten\Documents\GitHub\CST-415\Client UI\obj\Debug\Client UI.exe
+C:\Users\Laten\Documents\GitHub\CST-415\Client UI\obj\Debug\Client UI.pdb
+C:\Users\Laten\Documents\GitHub\CST-415\Client UI\obj\Debug\GeneratedInternalTypeHelper.g.cs

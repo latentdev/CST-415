@@ -1,0 +1,7 @@
+C:\Users\Laten\Documents\Visual Studio 2017\Projects\CST 415 Assignment 1\CST-415\Port Reservation Service\bin\Debug\Port Reservation Service.dll
+C:\Users\Laten\Documents\Visual Studio 2017\Projects\CST 415 Assignment 1\CST-415\Port Reservation Service\bin\Debug\Port Reservation Service.pdb
+C:\Users\Laten\Documents\Visual Studio 2017\Projects\CST 415 Assignment 1\CST-415\Port Reservation Service\bin\Debug\Protocol.dll
+C:\Users\Laten\Documents\Visual Studio 2017\Projects\CST 415 Assignment 1\CST-415\Port Reservation Service\bin\Debug\Protocol.pdb
+C:\Users\Laten\Documents\Visual Studio 2017\Projects\CST 415 Assignment 1\CST-415\Port Reservation Service\obj\Debug\Port Reservation Service.csprojResolveAssemblyReference.cache
+C:\Users\Laten\Documents\Visual Studio 2017\Projects\CST 415 Assignment 1\CST-415\Port Reservation Service\obj\Debug\Port Reservation Service.dll
+C:\Users\Laten\Documents\Visual Studio 2017\Projects\CST 415 Assignment 1\CST-415\Port Reservation Service\obj\Debug\Port Reservation Service.pdb

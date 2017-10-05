@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.CompilerServices;
 using ClientModel;
+using Protocol;
 using System.Collections.ObjectModel;
 
 namespace Client_UI

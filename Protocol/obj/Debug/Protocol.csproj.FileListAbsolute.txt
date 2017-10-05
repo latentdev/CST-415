@@ -1,0 +1,5 @@
+C:\Users\Laten\Documents\Visual Studio 2017\Projects\CST 415 Assignment 1\CST-415\Protocol\bin\Debug\Protocol.dll
+C:\Users\Laten\Documents\Visual Studio 2017\Projects\CST 415 Assignment 1\CST-415\Protocol\bin\Debug\Protocol.pdb
+C:\Users\Laten\Documents\Visual Studio 2017\Projects\CST 415 Assignment 1\CST-415\Protocol\obj\Debug\Protocol.csprojResolveAssemblyReference.cache
+C:\Users\Laten\Documents\Visual Studio 2017\Projects\CST 415 Assignment 1\CST-415\Protocol\obj\Debug\Protocol.dll
+C:\Users\Laten\Documents\Visual Studio 2017\Projects\CST 415 Assignment 1\CST-415\Protocol\obj\Debug\Protocol.pdb

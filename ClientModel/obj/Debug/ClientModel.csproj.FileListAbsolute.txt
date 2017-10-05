@@ -2,3 +2,10 @@ C:\Users\Laten\Documents\GitHub\CST-415\ClientModel\bin\Debug\ClientModel.dll
 C:\Users\Laten\Documents\GitHub\CST-415\ClientModel\bin\Debug\ClientModel.pdb
 C:\Users\Laten\Documents\GitHub\CST-415\ClientModel\obj\Debug\ClientModel.dll
 C:\Users\Laten\Documents\GitHub\CST-415\ClientModel\obj\Debug\ClientModel.pdb
+C:\Users\Laten\Documents\Visual Studio 2017\Projects\CST 415 Assignment 1\CST-415\ClientModel\bin\Debug\ClientModel.dll
+C:\Users\Laten\Documents\Visual Studio 2017\Projects\CST 415 Assignment 1\CST-415\ClientModel\bin\Debug\ClientModel.pdb
+C:\Users\Laten\Documents\Visual Studio 2017\Projects\CST 415 Assignment 1\CST-415\ClientModel\bin\Debug\Protocol.dll
+C:\Users\Laten\Documents\Visual Studio 2017\Projects\CST 415 Assignment 1\CST-415\ClientModel\bin\Debug\Protocol.pdb
+C:\Users\Laten\Documents\Visual Studio 2017\Projects\CST 415 Assignment 1\CST-415\ClientModel\obj\Debug\ClientModel.csprojResolveAssemblyReference.cache
+C:\Users\Laten\Documents\Visual Studio 2017\Projects\CST 415 Assignment 1\CST-415\ClientModel\obj\Debug\ClientModel.dll
+C:\Users\Laten\Documents\Visual Studio 2017\Projects\CST 415 Assignment 1\CST-415\ClientModel\obj\Debug\ClientModel.pdb

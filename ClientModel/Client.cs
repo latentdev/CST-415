@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using Protocol;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -27,41 +28,6 @@ namespace ClientModel
             // construct the server's address and port
             endPt = new IPEndPoint(IPAddress.Parse(ADDRESS), PORT);
         }
-        /*public void Loop()
-        {
-            try
-            {
-                // send a message to the server
-                Console.WriteLine("Sending message to server...");
-                Message msg = new Message((byte)msg_type.REQUEST_PORT, "test_service".ToCharArray(), 40064, (byte)status.SUCCESS);
-
-                byte[] buffer = msg.ToPacket();
-                int result = clientSocket.SendTo(buffer, endPt);
-                Console.WriteLine("Sent " + result.ToString() + " bytes");
-
-                // receive a message from the server
-                Console.WriteLine("Waiting for message from server...");
-                buffer = new byte[255];
-                EndPoint remoteEP = new IPEndPoint(IPAddress.Any, 0);
-                result = clientSocket.ReceiveFrom(buffer, ref remoteEP);
-                Console.WriteLine();
-                Console.WriteLine("Received " + result.ToString() + " bytes");
-                Console.WriteLine();
-                Console.WriteLine(Message.FromPacket(buffer).ToString());
-                Console.WriteLine();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Exception when receiving..." + ex.Message);
-            }
-
-            // close the socket and quit
-            Console.WriteLine("Closing down");
-            clientSocket.Dispose();
-            Console.WriteLine("Closed!");
-
-            Console.ReadKey();
-        }*/
 
         public void RequestPort()
         {

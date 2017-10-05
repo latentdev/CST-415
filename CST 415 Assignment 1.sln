@@ -1,13 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CST 415 Assignment 1", "CST 415 Assignment 1\CST 415 Assignment 1.csproj", "{4FD58F3C-A78E-4F20-9476-B8A7D11FE355}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client UI", "Client UI\Client UI.csproj", "{D71E7E42-8BB9-45CC-A4B8-20F3B985D2EA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientModel", "ClientModel\ClientModel.csproj", "{0FD45A17-A16C-4F3D-96AA-4380F1FB8D79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Protocol", "Protocol\Protocol.csproj", "{3CEFB0A5-E4AA-4E73-8B13-1CC6C50549F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Port Reservation Service UI", "Port Reservation Service UI\Port Reservation Service UI.csproj", "{013CE702-04EC-4EB7-8EC1-14F18A668A66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Port Reservation Service", "Port Reservation Service\Port Reservation Service.csproj", "{10C6581F-D9B7-45BD-8BB3-681D393266A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{EF8641E4-74A7-4A48-99C7-5AE6D25412FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PRS", "PRS", "{6B376D5B-75E9-46CA-B7D4-1627E83012E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +23,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4FD58F3C-A78E-4F20-9476-B8A7D11FE355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4FD58F3C-A78E-4F20-9476-B8A7D11FE355}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4FD58F3C-A78E-4F20-9476-B8A7D11FE355}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4FD58F3C-A78E-4F20-9476-B8A7D11FE355}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D71E7E42-8BB9-45CC-A4B8-20F3B985D2EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D71E7E42-8BB9-45CC-A4B8-20F3B985D2EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D71E7E42-8BB9-45CC-A4B8-20F3B985D2EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,8 +31,26 @@ Global
 		{0FD45A17-A16C-4F3D-96AA-4380F1FB8D79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FD45A17-A16C-4F3D-96AA-4380F1FB8D79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FD45A17-A16C-4F3D-96AA-4380F1FB8D79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CEFB0A5-E4AA-4E73-8B13-1CC6C50549F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CEFB0A5-E4AA-4E73-8B13-1CC6C50549F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CEFB0A5-E4AA-4E73-8B13-1CC6C50549F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CEFB0A5-E4AA-4E73-8B13-1CC6C50549F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{013CE702-04EC-4EB7-8EC1-14F18A668A66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{013CE702-04EC-4EB7-8EC1-14F18A668A66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{013CE702-04EC-4EB7-8EC1-14F18A668A66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{013CE702-04EC-4EB7-8EC1-14F18A668A66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10C6581F-D9B7-45BD-8BB3-681D393266A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10C6581F-D9B7-45BD-8BB3-681D393266A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10C6581F-D9B7-45BD-8BB3-681D393266A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10C6581F-D9B7-45BD-8BB3-681D393266A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D71E7E42-8BB9-45CC-A4B8-20F3B985D2EA} = {EF8641E4-74A7-4A48-99C7-5AE6D25412FB}
+		{0FD45A17-A16C-4F3D-96AA-4380F1FB8D79} = {EF8641E4-74A7-4A48-99C7-5AE6D25412FB}
+		{013CE702-04EC-4EB7-8EC1-14F18A668A66} = {6B376D5B-75E9-46CA-B7D4-1627E83012E0}
+		{10C6581F-D9B7-45BD-8BB3-681D393266A4} = {6B376D5B-75E9-46CA-B7D4-1627E83012E0}
 	EndGlobalSection
 EndGlobal

@@ -101,6 +101,13 @@
       <Project>{0fd45a17-a16c-4f3d-96aa-4380f1fb8d79}</Project>
       <Name>ClientModel</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Protocol\Protocol.csproj">
+      <Project>{3cefb0a5-e4aa-4e73-8b13-1cc6c50549f5}</Project>
+      <Name>Protocol</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
